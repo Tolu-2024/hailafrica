@@ -1,0 +1,148 @@
+/* Donate Page Specific Styles */
+/* This file extends the main index.css styles with page-specific customizations */
+
+/* Donate page specific hero background */
+.hero-section {
+    background-image: url('donate.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile responsive background */
+@media only screen and (max-width: 800px) {
+    .hero-section {
+        background-image: url('donate1_edited.jpg');
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 910px) {
+    .hero-section {
+        background-image: url('donate1_edited.jpg');
+    }
+}
+
+/* Donation form specific styles */
+.amount-btn {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.amount-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.amount-btn.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.amount-btn.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Form animations */
+.form-card {
+    animation: fadeInUp 0.6s ease;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom button styles */
+.btn-custom {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 171, 27, 0.3);
+}
+
+/* Impact cards hover effects */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header styling - use green instead of blue */
+.card-header.bg-primary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary i {
+    color: white !important;
+}
+
+/* Amount buttons styling */
+.amount-btn.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.amount-btn.btn-primary:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Icon styling */
+/* .bi {
+    color: var(--secondary-color);
+} */
+
+.card-icon .bi {
+    color: white;
+}
+
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+    color: var(--primary-color) !important;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color) !important;
+}

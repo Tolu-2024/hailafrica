@@ -1,0 +1,285 @@
+/* About Page Specific Styles */
+/* This file extends the main index.css styles with page-specific customizations */
+
+/* About page specific hero background */
+.hero-section {
+    background-image: url('abouthero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Founder section specific styles */
+.founder-section {
+    background-image: url('africa.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.founder-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.founder-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonial carousel specific styles */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: var(--secondary-color);
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background-color: var(--primary-color);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--secondary-color);
+}
+
+/* Form header styling - use green instead of blue */
+.card-header.bg-primary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary i {
+    color: white !important;
+}
+
+/* Animation for fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+    color: var(--primary-color) !important;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color) !important;
+}
+
+/* Team Chart Styles */
+.team-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.team-chart {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.team-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.1); /* Zoom effect */
+    transition: transform 0.3s ease;
+}
+
+.team-avatar:hover img {
+    transform: scale(1.2); /* More zoom on hover */
+}
+
+.team-name {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.team-position {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Founder specific styling */
+.founder .team-avatar {
+    width: 180px;
+    height: 180px;
+    border-width: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.founder .team-name {
+    font-size: 1.5rem;
+}
+
+/* Directors styling */
+.team-directors {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.director .team-avatar {
+    width: 130px;
+    height: 130px;
+    border-width: 3px;
+}
+
+/* Connection lines */
+.team-connector {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.connector-line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    position: relative;
+}
+
+.connector-line::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--primary-color);
+}
+
+.connector-line::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-directors {
+        gap: 2rem;
+    }
+
+    .director .team-avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+    .founder .team-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .team-avatar img {
+        transform: scale(1.05);
+    }
+
+    .team-avatar:hover img {
+        transform: scale(1.15);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-directors {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .team-avatar {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .founder .team-avatar {
+        width: 140px !important;
+        height: 140px !important;
+    }
+}

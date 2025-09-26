@@ -1,0 +1,191 @@
+/* Partner Page Specific Styles */
+/* This file extends the main index.css styles with page-specific customizations */
+
+/* Partner page specific hero background */
+.hero-section {
+    background-image: url('partnerhero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile responsive background */
+@media only screen and (max-width: 800px) {
+    .hero-section {
+        background-image: url('partner_edited.jpg');
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 910px) {
+    .hero-section {
+        background-image: url('partner_edited.jpg');
+    }
+}
+
+/* Partnership form specific styles */
+.form-card {
+    animation: fadeInUp 0.6s ease;
+    transition: all 0.3s ease;
+}
+
+/* Custom button styles */
+.btn-custom {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(250, 171, 27, 0.3);
+}
+
+/* Form animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Partnership benefit cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Select dropdown styling */
+.form-select:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(85, 113, 85, 0.25);
+}
+
+/* Textarea styling */
+.form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(85, 113, 85, 0.25);
+}
+
+/* Icon styling */
+/* .bi {
+    color: var(--secondary-color);
+} */
+
+.card-icon .bi {
+    color: white;
+}
+
+/* Partnership type cards special styling */
+.partnership-types .card {
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.partnership-types .card:hover {
+    border-left-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Form section spacing */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+/* Enhanced form labels */
+.form-label {
+    font-weight: 500;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+/* Call to action buttons */
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive form adjustments */
+@media (max-width: 768px) {
+    .form-card {
+        margin: 1rem;
+    }
+    
+    .card-body {
+        padding: 2rem !important;
+    }
+    
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+}
+
+/* Form header styling - use green instead of blue */
+.card-header.bg-primary {
+    background-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+    color: white !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.btn-primary i {
+    color: white !important;
+}
+
+/* Partnership benefits grid */
+.partnership-benefits .row {
+    margin-bottom: 2rem;
+}
+
+.partnership-benefits .card-icon {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    box-shadow: 0 8px 25px rgba(250, 171, 27, 0.3);
+}
+
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+}
+
+.social-links a {
+    transition: transform 0.3s ease;
+    color: var(--primary-color) !important;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: var(--secondary-color) !important;
+}

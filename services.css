@@ -1,0 +1,120 @@
+/* Services Page Specific Styles */
+/* This file extends the main index.css styles with page-specific customizations */
+
+/* Services page specific hero background */
+.hero-section {
+    background-image: url('service1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Service detail cards specific styles */
+.service-detail-card {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.service-detail-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.service-detail-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-features li::before {
+    content: "✓";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* CTA section styles */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.cta-section .btn-light {
+    background: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-detail-card {
+        padding: 2rem;
+    }
+
+    .service-detail-card .row {
+        text-align: center;
+    }
+
+    .service-icon {
+        margin-bottom: 1.5rem;
+    }
+
+    .service-features li {
+        text-align: left;
+        padding-left: 1rem;
+    }
+
+    .service-features li::before {
+        left: 0;
+    }
+}
